@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related local qa APIs "
+  contactDetails:
+    name: "QA contact - QA Lead"
+    email: "qa.lead@gmail.com"
+  onCallSupport:
+    - (666) 555-5555
+    - (666) 523-5555

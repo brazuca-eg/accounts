@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related local prod APIs "
+  contactDetails:
+    name: "Owner contact - Product Owner"
+    email: "product.owner@gmail.com"
+  onCallSupport:
+    - (777) 555-5555
+    - (777) 523-5555
