@@ -5,7 +5,7 @@ spring:
   application:
     name: "accounts"
   profiles:
-    active: "prod"
+    active: "default"
   datasource:
     url: jdbc:mysql://localhost:3306/accountsdb
     username: root
@@ -77,3 +77,15 @@ resilience4j.circuitbreaker:
       permittedNumberOfCallsInHalfOpenState: 2
       failureRateThreshold: 50
       waitDurationInOpenState: 10000
+
+resilience4j.retry:
+  configs:
+    default:
+      maxRetryAttempts: 3
+      waitDuration: 500
+      enableExponentialBackoff: true
+      exponentialBackoffMultiplier: 2
+      ignoreExceptions:
+        - java.lang.NullPointerException
+      retryExceptions:
+        - java.util.concurrent.TimeoutException
